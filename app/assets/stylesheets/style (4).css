@@ -489,7 +489,7 @@ ul li {
   }
 }
 
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
   .row .grid-1,
@@ -500,11 +500,11 @@ ul li {
   }
 }
 
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
 body,
 html {
   height: 100%;
-  background-color: #f5f5f3;
+  background-image:url("https://s1.1zoom.me/b5050/399/Sea_Sunrises_and_sunsets_495577_1920x1080.jpg")
 }
 
 body {
