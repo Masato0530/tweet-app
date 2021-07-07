@@ -1,13 +1,25 @@
 function post (){
   const submit = document.getElementById("myid");
-  submit.addEventListener("click", () => {
-    const form = document.getElementById("comment_text");
+  submit.addEventListener("click", (e) => { 
+    e.preventDefault();
+    const form = document.getElementById("form");
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/tweet_comments", true);
+    XHR.open("POST", form.action, true);
     XHR.responseType = "json";
     XHR.send(formData);
-    console.log("ok")
+    XHR.onload = () => {
+      const list = document.getElementById("list");
+      const formText = document.getElementById("text");
+      const item = XHR.response.comment;     
+      const html = `
+         <p>
+         <strong><a href=/user/user_id>${item.user.nickname}</a></strong> ：
+         ${item.comment.text}
+         </p>`;
+      list.insertAdjacentHTML("beforeend", html);
+      formText.value = "";
+    };
   });
 };
 
