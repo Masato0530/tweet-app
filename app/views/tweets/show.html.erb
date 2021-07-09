@@ -2,7 +2,6 @@
   <div class="content_post" style="background-image: url(<%= @tweet.image %>);">
     <% if user_signed_in? && current_user.id == @tweet.user_id %>
       <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
           <li>
             <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
@@ -27,7 +26,7 @@
         <%= form.submit "SEND", id: "myid" %>
       <% end %>
     <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+      <strong><p> コメントの投稿には新規登録orログインが必要です </p>
       </strong>
     <% end %>
     <div class="comments" id="list">
