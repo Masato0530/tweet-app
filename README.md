@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名    
+  ・Tweet-App
 
-Things you may want to cover:
+# アプリケーションの概要  
+  ・ログイン機能 
+  ・ログアウト機能
+  ・新規登録機能
+  ・ツイート（詳細 編集  削除)
 
-* Ruby version
+# 本番環境
 
-* System dependencies
+# テスト用アカウント
 
-* Configuration
+# 制作背景(意図)
+ 制作した意図は、情報収集する場、発信していく場、コミュニケーションが取れる場を設けて繋がりを広げるをテーマに制作しました。
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 
+ 

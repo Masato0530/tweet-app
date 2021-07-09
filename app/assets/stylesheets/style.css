@@ -1,148 +1,8 @@
-@charset "UTF-8";
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden],
-template {
-  display: none;
-}
-
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-a {
-  background: transparent;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
 
 h1 {
   font-size: 5px;
   margin: 0.67em 0;
 }
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-mark {
-  background: yellow;
-  color: black;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
-
-q {
-  quotes: "“""”""‘""’";
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-figure {
-  margin: 0;
-}
-
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
 button,
 input,
 select,
@@ -179,7 +39,6 @@ html input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
-
   padding: 0;
 }
 
@@ -221,12 +80,6 @@ table {
   box-sizing: border-box;
 }
 
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
 
 object,
 embed {
@@ -518,11 +371,8 @@ h4,
 h5,
 h6,
 body {
-  line-height: 1.57;
-  letter-spacing: 0.15em;
   font-size: 16px;
   color: #666;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
@@ -589,15 +439,6 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
   font-weight: bold;
 }
 
-.title--big {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.title--big i {
-  font-style: italic;
-  font-size: 1.8em;
-}
 
 header.header {
   padding: 10px;
@@ -726,8 +567,7 @@ div.contents.row div.content_post {
   position: relative;
   height: 250px;
   color: #fff;
-  background-color: #fff;
-  background-position: right 35% bottom 45%
+  background-color:#fff;
 }
 
 div.contents.row div.content_post:after {
@@ -788,7 +628,7 @@ div.contents.row div.content_post p {
   right: 80px;
   bottom: 130px;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
 }
@@ -796,7 +636,7 @@ div.contents.row div.content_post p {
 
 div.contents.row div.content_post span.name a {
   display: block;
-  color: #aaa;
+  color: #666;
 }
 
 div.contents.row div.content_post span.name a:hover {
