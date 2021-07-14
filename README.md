@@ -18,7 +18,7 @@
 
 # 制作背景(意図)
  制作した意図は、情報収集する場、発信していく場、コミュニケーションが取れる場を設ける事を意図として制作いたしました。
- コロナ禍が流行り、直接コミュニケーションが取りにくくなりコミュニティの場としてツイートアプリを作成しました。
+ なぜか？ コロナ禍が流行り、直接コミュニケーションが取りにくくなりコミュニティの場としてツイートアプリを作成し輪を広げられると思ったからです
 
 # DEMO
 
@@ -42,6 +42,9 @@
 ＜ツイートの削除＞
 [![Image from Gyazo](https://i.gyazo.com/ffa3404c93205ad1d0f476bfddff3e96.gif)](https://gyazo.com/ffa3404c93205ad1d0f476bfddff3e96)
 
+＜ツイートをコメント非同期＞
+[![Image from Gyazo](https://i.gyazo.com/05c1ef1edf5ea5b6aa69a96fb9a8f6f5.gif)](https://gyazo.com/05c1ef1edf5ea5b6aa69a96fb9a8f6f5)
+
 ## 工夫したポイント
 
 コメント機能を非同期通信にした事
@@ -60,3 +63,43 @@
 
 ・ダイレクトメッセージ機能
 
+## DB設計
+
+## users テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| email    | string | null: false |
+| password | string | null: false |
+| nickname | string | null: false |
+
+## Association
+
+- has_many :tweets
+- has_many :comments
+
+## tweets テーブル
+
+| Column   | Type    | Options                        |
+| -------- | ------  | ----------------------         |
+| text     | text    |                                |
+| user_id  | integer | null: false, foreign_key: true |
+
+## Association
+
+- belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column   | Type    | Options                        |
+| -------- | ------  | ----------------------         |
+| text     | text    | null: false                    |
+| user_id  | integer | null: false, foreign_key: true |
+| tweet_id | integer | null: false, foreign_key: true |
+
+## Association
+
+- belongs_to :tweet
+- belongs_to :user
+ 
